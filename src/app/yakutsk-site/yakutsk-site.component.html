@@ -1,0 +1,40 @@
+<div class="site-page-header-ghost-wrapper">
+  <nz-page-header nzBackIcon [nzGhost]="false">
+    <nz-page-header-title>Якутск</nz-page-header-title>
+    <nz-page-header-extra>
+      <nz-space>
+       <a nz-button nzType="link" href=" " class="button-menu">Главная</a>
+       <a nz-button nzType="link" href="City" class="button-menu">Население</a>
+       <a nz-button nzType="link" href="Me" class="button-menu">О разработчице</a>
+      </nz-space>
+    </nz-page-header-extra>
+    <nz-page-header-content>
+
+      <div nz-row nzJustify="space-around" nzAlign="middle">
+        <div nz-col nzFlex="2">
+      <img
+        nz-image
+        width="700px"
+        height="300px"
+        nzSrc="assets/img/number.png"
+        alt=""
+      />
+    </div>
+    <div nz-col nzFlex="0.3"></div>
+    <div nz-col nzFlex="5"><p class="height-100">
+      <p>
+        <ul>
+            <li>{{user.name}}</li>
+
+            <li>{{user.name2}}</li>
+
+            <li>{{user.name3}}</li>
+        </ul>
+   </div>
+  </div>
+  <br>
+
+  <a nz-button nzType="link" href="Edit" class="button-menu">Изменить</a>
+    </nz-page-header-content>
+  </nz-page-header>
+</div>
