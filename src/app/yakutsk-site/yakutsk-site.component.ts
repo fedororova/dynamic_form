@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { YakutskPageComponent } from '../yakutsk-edit-page/yakutsk-page.component';
 
 @Component({
   selector: 'app-yakutsk-site',
@@ -7,13 +6,24 @@ import { YakutskPageComponent } from '../yakutsk-edit-page/yakutsk-page.componen
   styleUrls: ['./yakutsk-site.component.css']
 })
 
+
 export class YakutskSiteComponent implements OnInit {
-  public user = JSON.parse(localStorage.getItem('key'));
+  public user: {
+    name: string;
+    name2: string;
+    name3: string;
+  } = JSON.parse(localStorage.getItem("key")) ?? {};
+
+  public data = {
+    izm: this.user.name ?? 'Население Якутска на 1 января 2022 года составляет 330615 человек.',
+    izm2: this.user.name2 ?? 'На 1 января 2021 года по численности населения город находился на 59-м месте из 1116 городов Российской Федерации.',
+    izm3: this.user.name3 ?? 'Якутск — многонациональный город. Большинство составляют якуты (саха) — 141 тыс. чел. и русские — 113 тыс. чел. Также проживают эвенки, эвены и другие.'
+  };
+
   constructor() {
   }
 
   ngOnInit(): void {
-    let user = JSON.parse(localStorage.getItem('key'));
   }
 
 }

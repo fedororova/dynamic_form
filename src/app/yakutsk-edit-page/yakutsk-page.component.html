@@ -3,9 +3,9 @@
     <nz-page-header-title>Якутск</nz-page-header-title>
     <nz-page-header-extra>
       <nz-space>
-       <a nz-button nzType="link" href=" " class="button-menu">Главная</a>
-       <a nz-button nzType="link" href="City" class="button-menu">Население</a>
-       <a nz-button nzType="link" href="Me" class="button-menu">О разработчице</a>
+        <a nz-button nzType="link" href=" " class="button-menu">Главная</a>
+        <a nz-button nzType="link" href="City" class="button-menu">Население</a>
+        <a nz-button nzType="link" href="Me" class="button-menu">О разработчике</a>
       </nz-space>
     </nz-page-header-extra>
     <nz-page-header-content>
@@ -22,14 +22,24 @@
     </div>
     <div nz-col nzFlex="0.3"></div>
     <div nz-col nzFlex="5"><p class="height-100">
+      <h4 nz-typography>Информация о населении города Якутска</h4>
 
-<div *ngIf="data">
-  <h1>{{data.name}}</h1>
-  <input [(ngModel)]= "data.name">
-<input [(ngModel)]= "data.name2">
-<input [(ngModel)]= "data.name3">
-<button (click)="save()" >Save</button>
-</div>
+  <form nz-form [formGroup]="myFirstReactiveForm" (submit)="onSubmit()" >
+    <br>
+    <input nz-input type="text" id="name" formControlName="name" id="userForm"/>
+    <div class="error" *ngIf="isControlInvalid('name')">Текст может состоять только из российских букв</div>
+    <br/><br/>
+
+    <input nz-input type="text" id="name2" formControlName="name2" id="userForm" />
+    <br/><br/>
+
+    <input nz-input type="text" id="name3" formControlName="name3" id="userForm" />
+    <br/><br/>
+
+
+    <button nz-button nzType="primary" type="submit" (ngsubmit)="onSubmit()">Сохранить</button>
+  </form>
+
    </div>
   </div>
   <br>

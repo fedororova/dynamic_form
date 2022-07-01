@@ -21,17 +21,21 @@ nz-content {
 nz-footer {
   text-align: center;
 }
+
 .p{
   font-family: 'Andale Mono', monospace;
     color: black;
     font-weight: bold;
 }
+
 .ul{
   font-family: 'Andale Mono', monospace;
 }
+
 .ul li{
   font-family: 'Andale Mono', monospace;
 }
+
 .p_center{
   text-align: center;
   font-weight: bold;
@@ -40,11 +44,13 @@ nz-footer {
 	color: black;
   font-family: 'Andale Mono', monospace;
   }
+
   .p_center span {
     padding: 10px;
     background: skyblue;
     font-family: 'Andale Mono', monospace;
   }
+
   .button-menu{
     margin-right: 8px;
     margin-bottom: 12px;

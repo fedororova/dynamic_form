@@ -29,7 +29,9 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { YakutskSiteComponent } from './yakutsk-site/yakutsk-site.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { ReactiveFormsModule } from '@angular/forms';
 registerLocaleData(en);
 
 
@@ -57,8 +59,10 @@ const routes = [
   ],
   imports: [
     BrowserModule,
+    NzMenuModule,
     ReactiveFormsModule,
     FormsModule,
+    NzInputModule,
     HttpClientModule,
     BrowserAnimationsModule,
     NzButtonModule,

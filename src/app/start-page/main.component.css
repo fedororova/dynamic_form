@@ -24,6 +24,24 @@ nz-footer {
 .p{
   font-family: 'Andale Mono', monospace;
     color: black;
+    font-weight: bold;
+}
+.ul{
+  font-family: 'Andale Mono', monospace;
+}
+.ul li{
+  font-family: 'Andale Mono', monospace;
+}
+p[nz-typography] {
+  margin-bottom: 1em;
+}
+.nz-button{
+  margin-right: 8px;
+  margin-bottom: 12px;
+  background-color: #4682B4;
+  font-family: 'Andale Mono', monospace;
+  color: white;
+  font-weight: bold;
 }
 .button-menu{
   margin-right: 8px;
@@ -32,4 +50,7 @@ nz-footer {
   font-family: 'Andale Mono', monospace;
   color: white;
   font-weight: bold;
+}
+p[nz-typography] {
+  margin-bottom: 1em;
 }
